@@ -25,5 +25,6 @@ adventurer.inventory.forEach(element => {
 
 console.log(adventurer); // for test only.
 
+adventurer.roll();
 
 
