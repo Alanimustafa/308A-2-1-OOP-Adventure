@@ -7,7 +7,7 @@ const adventurer = {
     type: "Cat",
     companion: { // Part 1 | Leo's companion Frank has been added.
       name: "Frank",
-      type: "flea",
+      type: "Flea",
       inventory: ["small hat", "sunglasses"]
     }
   },

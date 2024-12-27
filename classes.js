@@ -41,12 +41,12 @@ robin.companion.companion.roll(); // Frank Dice Roll.
 // Adding the Adventure class which is extended from Character class.
 
 class Adventurer extends Character {
-  constructor (name, role) {
+  constructor (name, role, advInventory) {
     super(name);
     // Adventurers have specialized roles.
     this.role = role;
     // Every adventurer starts with a bed and 50 gold coins.
-    this.inventory.push("bedroll", "50 gold coins");
+    this.inventory.push("bedroll", "50 gold coins", advInventory);
   }
   // Adventurers have the ability to scout ahead of them.
   scout () {
@@ -60,9 +60,23 @@ class Companion extends Character {
   constructor (name, role, compIventory) {
     super(name); // using the name from the Character Class.
     this.role = role; // To specify the role of the comapnion.
-    this.inventory.push(`${compIventory}`);
+    this.inventory = compIventory ;
   }
   help () {
     console.log(`${this.name} is helping ${Adventurer.name}`);
   }
 }
+
+// Creating a new Advanturer Robin1. 
+let robin1 = new Adventurer ("Robin1", 100, ["sword", "potion", "artifact"]) ;
+console.log (robin1);
+
+
+// Creating a new Companion Leo1.
+let leo1 = new Companion ("Leo1", "Cat");
+console.log(leo1);
+
+
+// Crating Frank as a new companion 
+let frank = new Companion ("Frank", "Flea", ["small hat", "sunglasses"]);
+console.log(frank);
