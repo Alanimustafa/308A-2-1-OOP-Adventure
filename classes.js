@@ -31,5 +31,38 @@ robin.companion.companion.type = "Fela";
 robin.companion.companion.inventory = ["small hat", "sunglasses"]
 
 console.log(robin); // For test only.
-robin.companion.roll();
-robin.companion.companion.roll();
+robin.companion.roll(); // Leo Dice Roll.
+robin.companion.companion.roll(); // Frank Dice Roll.
+
+
+
+// Part 3 | Class Features
+
+// Adding the Adventure class which is extended from Character class.
+
+class Adventurer extends Character {
+  constructor (name, role) {
+    super(name);
+    // Adventurers have specialized roles.
+    this.role = role;
+    // Every adventurer starts with a bed and 50 gold coins.
+    this.inventory.push("bedroll", "50 gold coins");
+  }
+  // Adventurers have the ability to scout ahead of them.
+  scout () {
+    console.log(`${this.name} is scouting ahead...`);
+    super.roll();
+  }
+}
+
+// Part 3 | Creatign the companion class 
+class Companion extends Character {
+  constructor (name, role, compIventory) {
+    super(name); // using the name from the Character Class.
+    this.role = role; // To specify the role of the comapnion.
+    this.inventory.push(`${compIventory}`);
+  }
+  help () {
+    console.log(`${this.name} is helping ${Adventurer.name}`);
+  }
+}
