@@ -8,7 +8,7 @@ const adventurer = {
     companion: { // Part 1 | Leo's companion Frank has been added.
       name: "Frank",
       type: "flea",
-      inventory: ["hat", "sunglasses"]
+      inventory: ["small hat", "sunglasses"]
     }
   },
   roll (mod = 0) {  // Part 1 | Adding the roll function as a method for Robin
