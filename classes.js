@@ -13,3 +13,14 @@ class Character {
     console.log(`${this.name} rolled a ${result}.`)
     }
 }
+
+
+// Part 2 | re-creating Robin using the Charcter class.
+const robin = new Character ("Robin");
+robin.health = 100 ;
+robin.inventory = ["sword", "potion", "artifact"];
+
+// Adding Leo as a companion of Robin 
+robin.companion = new Character("Leo");
+robin.companion.type = "Cat";
+
