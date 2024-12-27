@@ -24,7 +24,12 @@ robin.inventory = ["sword", "potion", "artifact"];
 robin.companion = new Character("Leo");
 robin.companion.type = "Cat";
 
+
 // Adding Frank as Leo's companion 
 robin.companion.companion = new Character ("Frank");
 robin.companion.companion.type = "Fela";
 robin.companion.companion.inventory = ["small hat", "sunglasses"]
+
+console.log(robin); // For test only.
+robin.companion.roll();
+robin.companion.companion.roll();
