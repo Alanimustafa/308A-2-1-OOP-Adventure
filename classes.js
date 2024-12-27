@@ -8,6 +8,8 @@ class Character {
     this.health = 100;
     this.inventory = [];
   }
+  static MAX_HEALTH = 100; // Part 4 | Static MAX_HEALTH has been added.
+
   roll (mod = 0) {  // Part 2 | Adding the roll function as a method to Character
     const result = Math.floor(Math.random() * 20) + 1 + mod;
     console.log(`${this.name} rolled a ${result}.`)
@@ -48,6 +50,7 @@ class Adventurer extends Character {
     // Every adventurer starts with a bed and 50 gold coins.
     this.inventory.push("bedroll", "50 gold coins", advInventory);
   }
+  static ROLES = ["Fighter", "Healer", "Wizard"];  // Part 4 | Static ROLES to Advanture.
   // Adventurers have the ability to scout ahead of them.
   scout () {
     console.log(`${this.name} is scouting ahead...`);
@@ -80,3 +83,9 @@ console.log(leo1);
 // Crating Frank as a new companion 
 let frank = new Companion ("Frank", "Flea", ["small hat", "sunglasses"]);
 console.log(frank);
+
+// Part 5 | Testing the static property of Rolls Array.
+console.log(Adventurer.ROLES);
+
+// Part 5 | testing the static method MAX_Health of Character Class.
+console.log(Character.MAX_HEALTH);
