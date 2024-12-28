@@ -58,7 +58,7 @@ class Adventurer extends Character {
   }
   duel(Advanturer) { // Part 6 | Developing skills
     const result = Math.floor(Math.random() * 20) + 1 + Advanturer -1;
-    console.log(`${this.name} rolled a ${result}. Health is ${super.health}`);
+    console.log(`${this.name} rolled a ${result}. Health is ${super.health}`); // retreiving the health from the Character Class.
   }
 }
 
