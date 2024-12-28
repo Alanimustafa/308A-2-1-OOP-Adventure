@@ -84,8 +84,31 @@ console.log(leo1);
 let frank = new Companion ("Frank", "Flea", ["small hat", "sunglasses"]);
 console.log(frank);
 
-// Part 5 | Testing the static property of Rolls Array.
+// Part 4 | Testing the static property of Rolls Array.
 console.log(Adventurer.ROLES);
 
-// Part 5 | testing the static method MAX_Health of Character Class.
+// Part 4 | testing the static method MAX_Health of Character Class.
 console.log(Character.MAX_HEALTH);
+
+
+// Part 5 | Gather your party
+
+class AdventurerFactory {  
+  constructor (role) {
+    this.role = role;
+    this.adventurers = [];
+  }
+  generate (name) {
+    const newAdventurer = new Adventurer(name, this.role);
+    this.adventurers.push(newAdventurer);
+  }
+  findByIndex (index) {
+    return this.adventurers[index];
+  }
+  findByName (name) {
+    return this.adventurers.find((a) => a.name === name);
+  }
+}
+
+const healers = new AdventurerFactory("Healer");
+const robin2 = healers.generate("Robin2");
