@@ -56,7 +56,12 @@ class Adventurer extends Character {
     console.log(`${this.name} is scouting ahead...`);
     super.roll();
   }
+  duel(Advanturer) { // Part 6 | Developing skills
+    const result = Math.floor(Math.random() * 20) + 1 + Advanturer -1;
+    console.log(`${this.name} rolled a ${result}. Health is ${super.health}`);
+  }
 }
+
 
 // Part 3 | Creatign the companion class 
 class Companion extends Character {
